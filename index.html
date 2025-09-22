@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Album Cinta Kita</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>💖 Album Cinta Kita 💖</h1>
+  <p>Kenangan manis bersama sejak 2024</p>
+  <div class="gallery">
+    <div class="photo" onclick="showCaption('Momen pertama kita jadian 💘')">
+      <img src="images/foto1.jpg" alt="Foto 1">
+    </div>
+  </div>
+
+  <div id="captionBox" class="hidden">
+    <p id="captionText"></p>
+    <button onclick="hideCaption()">Tutup</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
