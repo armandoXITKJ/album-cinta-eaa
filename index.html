@@ -3,22 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <title>Album Cinta Kita</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4e1, #ffc0cb);
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    h1 {
+      color: #d6336c;
+      margin-bottom: 0.5em;
+    }
+    p {
+      color: #6c757d;
+      margin-bottom: 2em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .photo {
+      position: relative;
+      width: 220px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .photo:hover {
+      transform: scale(1.05);
+    }
+    .photo img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .caption {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      background: rgba(255, 105, 180, 0.85);
+      color: white;
+      padding: 10px;
+      border-radius: 0 0 12px 12px;
+      width: 100%;
+      font-size: 14px;
+    }
+    .photo:hover .caption {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <h1>💖 Album Cinta Kita 💖</h1>
-  <p>Kenangan manis bersama sejak 2024</p>
+  <h1>Album Cinta Kita</h1>
+  <p>Setiap foto punya cerita. Klik untuk lihat kenangannya.</p>
+
   <div class="gallery">
-    <div class="photo" onclick="showCaption('Momen pertama kita jadian 💘')">
-      <img src="images/foto1.jpg" alt="Foto 1">
+    <div class="photo">
+      <img src="foto1.jpg" alt="Foto 1">
+      <div class="caption">Cerita foto 1 di sini...</div>
+    </div>
+    <div class="photo">
+      <img src="foto2.jpg" alt="Foto 2">
+      <div class="caption">Cerita foto 2 di sini...</div>
+    </div>
+    <div class="photo">
+      <img src="foto3.jpg" alt="Foto 3">
+      <div class="caption">Cerita foto 3 di sini...</div>
+    </div>
+    <div class="photo">
+      <img src="foto4.jpg" alt="Foto 4">
+      <div class="caption">Cerita foto 4 di sini...</div>
+    </div>
+    <div class="photo">
+      <img src="foto5.jpg" alt="Foto 5">
+      <div class="caption">Cerita foto 5 di sini...</div>
+    </div>
+    <div class="photo">
+      <img src="foto6.jpg" alt="Foto 6">
+      <div class="caption">Cerita foto 6 di sini...</div>
+    </div>
+    <div class="photo">
+      <img src="foto7.jpg" alt="Foto 7">
+      <div class="caption">Cerita foto 7 di sini...</div>
     </div>
   </div>
-
-  <div id="captionBox" class="hidden">
-    <p id="captionText"></p>
-    <button onclick="hideCaption()">Tutup</button>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
