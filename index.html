@@ -2,40 +2,121 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Selamat Datang di Shrine Kita</title>
+  <title>Altar Cinta Kita</title>
   <style>
     body {
-      background: linear-gradient(to bottom right, #ffc0cb, #ffe4e1);
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at center, #1a1a1a, #000);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
     }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
     .heart {
-      font-size: 100px;
-      color: #ff69b4;
+      width: 100px;
+      height: 90px;
+      background: #ff69b4;
+      position: relative;
+      transform: rotate(-45deg);
       animation: pulse 2s infinite;
       cursor: pointer;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background: #ff69b4;
+      position: absolute;
+      border-radius: 50%;
     }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.2) rotate(-45deg); }
+      100% { transform: scale(1) rotate(-45deg); }
+    }
+
     .text {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 20px;
-      color: #d6336c;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
+  <div class="stars">
+    <!-- Generate 50 stars -->
+    <script>
+      for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        document.querySelector('.stars').appendChild(star);
+      }
+    </script>
+  </div>
+
   <a href="galeri.html">
-    <div class="heart">❤️</div>
+    <div class="heart"></div>
   </a>
-  <div class="text">Ini cinta kita. Klik untuk masuk.</div>
+
+  <div class="text">
+    “Di sini, cinta tidak minta dilupakan.<br>
+    Ia hanya ingin dikenang, dipeluk, dan diberi tempat.”<br><br>
+    Klik hati untuk masuk ke altar kenangan.
+  </div>
+
+  <audio autoplay loop>
+    <source src="1.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
