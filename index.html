@@ -2,92 +2,40 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Album Cinta Kita</title>
+  <title>Selamat Datang di Shrine Kita</title>
   <style>
     body {
+      background: linear-gradient(to bottom right, #ffc0cb, #ffe4e1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #ffe4e1, #ffc0cb);
-      margin: 0;
-      padding: 2em;
       text-align: center;
     }
-    h1 {
-      color: #d6336c;
-      margin-bottom: 0.5em;
-    }
-    p {
-      color: #6c757d;
-      margin-bottom: 2em;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .photo {
-      position: relative;
-      width: 220px;
+    .heart {
+      font-size: 100px;
+      color: #ff69b4;
+      animation: pulse 2s infinite;
       cursor: pointer;
-      transition: transform 0.3s ease;
     }
-    .photo:hover {
-      transform: scale(1.05);
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
-    .photo img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-    .caption {
-      display: none;
-      position: absolute;
-      bottom: 0;
-      background: rgba(255, 105, 180, 0.85);
-      color: white;
-      padding: 10px;
-      border-radius: 0 0 12px 12px;
-      width: 100%;
-      font-size: 14px;
-    }
-    .photo:hover .caption {
-      display: block;
+    .text {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #d6336c;
     }
   </style>
 </head>
 <body>
-  <h1>Album Cinta Kita</h1>
-  <p>Setiap foto punya cerita. Klik untuk lihat kenangannya.</p>
-
-  <div class="gallery">
-    <div class="photo">
-      <img src="foto1.jpeg" alt="Waktu Kita habis kelarin masalah">
-      <div class="caption">HALOO GAYSS SEDIKIT CERITA JADI WAKTU ITU TEMEN GUA SEDIKIT TERLIBAT MASALAH SOAL OMONGAN YANG ASAL CEPLAS CEPLOS SEBENERNYA DISITU GUA GATAU PERCIS MEREKA NGOMONGIN APA KARNA DISAAT ITU GUA LAGI GAWE,DAN MEREKA POSISINYA LAGI NGOBROL ADA 4 TEMEN GUA DAN 1 CEWE GUA,DAN CEWE GUA CERITA KALO DIA NGERASA DI LECEHIN KARNA BAHAS 18+ DAN CEWE GUA GA TERIMA KALO DIGITUIN DAN AKHIRNYA GUA TEMUIN MEREKA BUAT SAMA SAMA JELASIN MAKSUD KEJELASANNYA</div>
-    </div>
-    <div class="photo">
-      <img src="foto2.jpeg" alt="Pas gua ultah ni">
-      <div class="caption">TEPAT DI 17 AGUSTUS 2025 GUA ULANG TAHUN YANG KE 18 PERTAMA GUA MAU SAY THANKYOUU BUAT CEWE GUA YANG SELALU MERHATIIN HAL KECIL DARI GUA SEPERTI CONTOH DI GAMBAR INI, GUA GATAU KALO DIA BAKAL SENIAT ITU UNTUK BIKIN HADIAH BUAT GUA, ORANG YANG SELALU ADA BUAT GUA, ORAMG YANG SELALU ADA DI SEBELAH GUA,DISAAT GUA SENENG ATAUPUN SUSAH, MAKASII YAA SAYANG?</div>
-    </div>
-    <div class="photo">
-      <img src="foto 3.jpeg" alt="Ini Waktu Manja Kali">
-      <div class="caption">SINGKAT AJA SEBENERNYA KALO INI, DIA KEPANASAN KALO BALIK NAIK MOTOR DAN KEBETULAN GUA LAGI BISA BAWA MOBIL,YAUDAH DIA SURUH GUA BAWA MOBIL</div>
-    </div>
-    <div class="photo">
-      <img src="foto 4.jpeg" alt="Ini Waktu Kita Habis Sama-Sama Brengsek">
-      <div class="caption">SEDIH SEBENERNYA KALO HARUS INGET INGET INI:( DISAAT KITA SAMA SAMA NGEGEDEIN EGO DAN SAMA SAMA ERA BRENGSEK KITA DISAAT KITA MASIH SAMA SAMA MENTINGIN DUNIA KITA, MASIH SAMA SAMA NYARI KEBEBASAN DAN NYARI KENYAMANAN DI ORANG LAIN, MAKANYA BEDA BANGET KAN DULU SAMA SEKARANG? KARNA KITA COBA BUAT PERBAIKIN ITU PELAN PELAN SEMUA MASALAH DAH KITA TAMATIN SEBENERNYA WKWKWK SEMUA MASALAH SAKIT HATI DAH KITA COBAIN,MUNGKIN DAH WAKTU NYA REHAT DARI MASA MASA ITU MUNGKIN?</div>
-    </div>
-    <div class="photo">
-      <img src="foto5.jpeg" alt="Ini waktu dia pertama kali gua ajak touring ahahaha">
-      <div class="caption">INI SEBENERNYA DADAKAN, KARNA WAKTU ITU GUA KEBETULAN MEGANG DUIT DAN TEMEN TEMEN GUA PADA GAJIAN BELUM LAMA, DAN GUA MAU SEDIKIT CERITA, JUJUR KALO DIBILANG CAPE MAH CAPE BANGET ASLI, KAKI PEGEL NAFAS NGOS NGOS AN TAPI JUJUR KEBAYAR KOK SAMA HASILNYA RASA CAPE LU DIJALAN RASA CAPE LU SAMA DUNIA KEBAYAR SEMUA, CUMAN JOK BELAKANG GUA AJA AGAK REWEL AHAHAH TAPI GAPAPA ITU WAJAR CEWE MUNGKIN CAPE JUGAA, POKOKNYA NI ORANG SPESIALL HAHAHHAHHA</div>
-    </div>
-    <div class="photo">
-      <img src="foto 6.jpeg" alt="Fhelin Wisuda Ahahahaha">
-      <div class="caption">SEBELUM GUA SEBANGSAT ITU... INI FOTO DIMANA ORANG YANG SAYANG SAMA GUA GA CUMAN FHELIN DOANG MELAINKAN ORANG TUA GUA PUN GUA TINGGALIN CUMAN KARNA EGO GUA YANG GEDE CUMAN KARNA HAL KECIL SAMPE SEMUA ORANG YANG GUA SAYANG BENER BENER GUA TINGGALIN SEJAUH MUNGKIN, TAPI MAU NYESEL PUN GA GUNA JUGA KAN? ITU DIA, TUGAS GUA DISINI JADIIN PELAJARAN SUPAYA SELANJUTNYA GUA GA LANJUTIN HAL KAYA GITU, HAL YANG BIKIN GUA KEHILANGAN SEGALANYA....</div>
-    </div>
-    <div class="photo">
-      <img src="foto 7.jpeg" alt="Ini Karma Gua...">
-      <div class="caption">DIFOTO ITU KELIATAN KAN GUA MAKE LAKBAN?AHAHAH ITU KARMA GUA, DISAAT GUA GEDEIN EGO GUA, GUA TINGGALIN ORANG YANG SAYANG SAMA GUA SAMPE BERBULAN BULAN DAN JADI ORANG YANG BISA DIBILANG GATAU DISAYANG AHAHHAA,GUA DISITU NGEDROP, BADAN GUA BENER BENER PANAS KERINGET DINGIN JUJUR DISITU PUN GUA PENGEN BUAT BALIK KERUMAH KETEMU KELUARGA, TAPI GUA SELALU DI PRINSIP, GABOLEH NYESEL BIKIN ORANG LAIN YANG NYESEL, SAMPAI PADA AKHIRNYA GUA NGEDROP SATU SATU NYA ORANG YANG NGERAWAT GUA SIAPA LAGI? KALO BUKAN CEWE GUA, YANG SELALU ADA DI SAMPING GUA...</div>
-    </div>
-  </div>
+  <a href="galeri.html">
+    <div class="heart">❤️</div>
+  </a>
+  <div class="text">Ini cinta kita. Klik untuk masuk.</div>
 </body>
 </html>
